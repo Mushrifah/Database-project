@@ -1,0 +1,17 @@
+<div class="card">
+    <h4 class="card-header">Add new booking</h4>
+    <div class="card-body">
+      <form class="form-inline" [formGroup]="addCarForm" (ngSubmit)="addCar()">
+        <input class="form-control mr-2" type="text" name="carname"
+               formControlName="carname" placeholder="Car Name">
+        <input class="form-control mr-2" type="text" name="name"
+               formControlName="name" placeholder="Name">
+        <input class="form-control mr-2" type="date" name="bookdate"
+               formControlName="bookdate" placeholder="Book date">
+        <button class="btn btn-primary" type="submit" [disabled]="!addCarForm.valid">
+          <i class="fa fa-plus"></i> Add
+        </button>
+      </form>
+    </div>
+  </div>
+  
